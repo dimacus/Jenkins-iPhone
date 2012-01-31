@@ -25,6 +25,8 @@
 		323E333A14D86C6200404FC9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 323E333814D86C6200404FC9 /* InfoPlist.strings */; };
 		323E333D14D86C6200404FC9 /* JenkinsTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 323E333C14D86C6200404FC9 /* JenkinsTests.h */; };
 		323E333F14D86C6200404FC9 /* JenkinsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 323E333E14D86C6200404FC9 /* JenkinsTests.m */; };
+		323E335314D871CA00404FC9 /* JenkinsJobsForView.m in Sources */ = {isa = PBXBuildFile; fileRef = 323E335114D871CA00404FC9 /* JenkinsJobsForView.m */; };
+		323E335414D871CA00404FC9 /* JenkinsJobsForView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 323E335214D871CA00404FC9 /* JenkinsJobsForView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,23 +45,26 @@
 		323E330B14D86C6100404FC9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		323E330D14D86C6100404FC9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		323E330F14D86C6100404FC9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		323E331314D86C6100404FC9 /* Jenkins-Info.plist */ = {isa = PBXFileReference; path = "Jenkins-Info.plist"; sourceTree = "<group>"; };
+		323E331314D86C6100404FC9 /* Jenkins-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Jenkins-Info.plist"; sourceTree = "<group>"; };
 		323E331514D86C6100404FC9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		323E331714D86C6100404FC9 /* Jenkins-Prefix.pch */ = {isa = PBXFileReference; path = "Jenkins-Prefix.pch"; sourceTree = "<group>"; };
+		323E331714D86C6100404FC9 /* Jenkins-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Jenkins-Prefix.pch"; sourceTree = "<group>"; };
 		323E331814D86C6100404FC9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		323E331A14D86C6100404FC9 /* JenkinsAppDelegate.h */ = {isa = PBXFileReference; path = JenkinsAppDelegate.h; sourceTree = "<group>"; };
+		323E331A14D86C6100404FC9 /* JenkinsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JenkinsAppDelegate.h; sourceTree = "<group>"; };
 		323E331B14D86C6100404FC9 /* JenkinsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JenkinsAppDelegate.m; sourceTree = "<group>"; };
 		323E331E14D86C6200404FC9 /* Jenkins.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Jenkins.xcdatamodel; sourceTree = "<group>"; };
 		323E332114D86C6200404FC9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		323E332314D86C6200404FC9 /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		323E332314D86C6200404FC9 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		323E332414D86C6200404FC9 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		323E332714D86C6200404FC9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
 		323E332E14D86C6200404FC9 /* JenkinsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JenkinsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		323E333714D86C6200404FC9 /* JenkinsTests-Info.plist */ = {isa = PBXFileReference; path = "JenkinsTests-Info.plist"; sourceTree = "<group>"; };
+		323E333714D86C6200404FC9 /* JenkinsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JenkinsTests-Info.plist"; sourceTree = "<group>"; };
 		323E333914D86C6200404FC9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		323E333B14D86C6200404FC9 /* JenkinsTests-Prefix.pch */ = {isa = PBXFileReference; path = "JenkinsTests-Prefix.pch"; sourceTree = "<group>"; };
+		323E333B14D86C6200404FC9 /* JenkinsTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JenkinsTests-Prefix.pch"; sourceTree = "<group>"; };
 		323E333C14D86C6200404FC9 /* JenkinsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JenkinsTests.h; sourceTree = "<group>"; };
 		323E333E14D86C6200404FC9 /* JenkinsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JenkinsTests.m; sourceTree = "<group>"; };
+		323E335014D871CA00404FC9 /* JenkinsJobsForView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JenkinsJobsForView.h; sourceTree = "<group>"; };
+		323E335114D871CA00404FC9 /* JenkinsJobsForView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JenkinsJobsForView.m; sourceTree = "<group>"; };
+		323E335214D871CA00404FC9 /* JenkinsJobsForView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JenkinsJobsForView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,14 +126,10 @@
 		323E331114D86C6100404FC9 /* Jenkins */ = {
 			isa = PBXGroup;
 			children = (
-				323E331A14D86C6100404FC9 /* JenkinsAppDelegate.h */,
-				323E331B14D86C6100404FC9 /* JenkinsAppDelegate.m */,
-				323E332014D86C6200404FC9 /* MainWindow.xib */,
-				323E332314D86C6200404FC9 /* RootViewController.h */,
-				323E332414D86C6200404FC9 /* RootViewController.m */,
-				323E332614D86C6200404FC9 /* RootViewController.xib */,
-				323E331D14D86C6200404FC9 /* Jenkins.xcdatamodeld */,
+				323E335714D88CDF00404FC9 /* Misc */,
+				323E335614D88CC500404FC9 /* RootViewController */,
 				323E331214D86C6100404FC9 /* Supporting Files */,
+				323E335514D8721200404FC9 /* JenkinsJobsForView */,
 			);
 			path = Jenkins;
 			sourceTree = "<group>";
@@ -162,6 +163,37 @@
 				323E333B14D86C6200404FC9 /* JenkinsTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		323E335514D8721200404FC9 /* JenkinsJobsForView */ = {
+			isa = PBXGroup;
+			children = (
+				323E335014D871CA00404FC9 /* JenkinsJobsForView.h */,
+				323E335114D871CA00404FC9 /* JenkinsJobsForView.m */,
+				323E335214D871CA00404FC9 /* JenkinsJobsForView.xib */,
+			);
+			name = JenkinsJobsForView;
+			sourceTree = "<group>";
+		};
+		323E335614D88CC500404FC9 /* RootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				323E332314D86C6200404FC9 /* RootViewController.h */,
+				323E332414D86C6200404FC9 /* RootViewController.m */,
+				323E332614D86C6200404FC9 /* RootViewController.xib */,
+			);
+			name = RootViewController;
+			sourceTree = "<group>";
+		};
+		323E335714D88CDF00404FC9 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				323E331D14D86C6200404FC9 /* Jenkins.xcdatamodeld */,
+				323E331A14D86C6100404FC9 /* JenkinsAppDelegate.h */,
+				323E331B14D86C6100404FC9 /* JenkinsAppDelegate.m */,
+				323E332014D86C6200404FC9 /* MainWindow.xib */,
+			);
+			name = Misc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +266,7 @@
 				323E331614D86C6100404FC9 /* InfoPlist.strings in Resources */,
 				323E332214D86C6200404FC9 /* MainWindow.xib in Resources */,
 				323E332814D86C6200404FC9 /* RootViewController.xib in Resources */,
+				323E335414D871CA00404FC9 /* JenkinsJobsForView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +306,7 @@
 				323E331C14D86C6100404FC9 /* JenkinsAppDelegate.m in Sources */,
 				323E331F14D86C6200404FC9 /* Jenkins.xcdatamodeld in Sources */,
 				323E332514D86C6200404FC9 /* RootViewController.m in Sources */,
+				323E335314D871CA00404FC9 /* JenkinsJobsForView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
