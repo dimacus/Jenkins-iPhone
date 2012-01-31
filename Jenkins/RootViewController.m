@@ -8,6 +8,9 @@
 
 #import "RootViewController.h"
 
+#import "JenkinsJobsForView.h"
+
+
 @interface RootViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 @end
@@ -60,27 +63,140 @@
 // Customize the number of sections in the table view.
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [[self.fetchedResultsController sections] count];
+//    return [[self.fetchedResultsController sections] count];
+    return 4;
 }
+
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    switch (section) {
+        case 0:
+            return @"Builds";
+            break;
+            
+        case 1:
+            return @"Misc";
+            break;
+            
+        case 2:
+            return @"Configure";
+            break;
+        default:
+            break;
+    }
+    return nil;
+}
+
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
-    return [sectionInfo numberOfObjects];
+//    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+//    return [sectionInfo numberOfObjects];
+    
+    
+    switch (section) {
+        case 0:
+            return 3;
+            break;
+            
+        case 1:
+            return 3;
+            break;
+            
+        case 2:
+            return 3;
+            break;
+            
+        case 3:
+            return 2;
+            break;
+            
+        default:
+            break;
+    }
+    return 0;
 }
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+//    static NSString *CellIdentifier = @"Cell";
+//    
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+//    if (cell == nil) {
+//        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+//    }
+//
+//    // Configure the cell.
+//    [self configureCell:cell atIndexPath:indexPath];
+    
+    
     static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
-
-    // Configure the cell.
-    [self configureCell:cell atIndexPath:indexPath];
+    
+    if (indexPath.section == 0) {
+        switch (indexPath.row) {
+            case 0:
+                cell.textLabel.text = @"Views";
+                cell.detailTextLabel.text = @"Show all configured views";
+                break;
+                
+            case 1:
+                cell.textLabel.text = @"All Jobs";
+                cell.detailTextLabel.text = @"Show jobs";
+                break;
+                
+            case 2:
+                cell.textLabel.text = @"My Jobs";
+                cell.detailTextLabel.text = @"Jobs which are saved to be watched";
+                break;
+                
+            default:
+                break;
+        }
+    } else if (indexPath.section == 1) {
+        switch (indexPath.row) {
+            case 0:
+                cell.textLabel.text = @"Queue";
+                cell.detailTextLabel.text = @"Current build queue";
+                break;
+                
+            case 1:
+                cell.textLabel.text = @"Nodes";
+                cell.detailTextLabel.text = @"List of all nodes";
+                break;
+                
+            case 2:
+                cell.textLabel.text = @"Users";
+                cell.detailTextLabel.text = @"List of current users";
+                break;
+            case 3:
+                
+            default:
+                break;
+        }
+    } else if (indexPath.section == 2) {
+        switch (indexPath.row) {
+            case 0:
+                cell.textLabel.text = @"Settings";
+                cell.detailTextLabel.text = @"Current Settings";
+                break;
+                
+            case 1:
+                cell.textLabel.text = @"Dev";
+                cell.detailTextLabel.text = @"";
+                break;
+                
+            default:
+                break;
+        }
+    } 
+    
     return cell;
 }
 
@@ -124,13 +240,73 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-    // ...
-    // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
-	*/
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    UIViewController* vc = nil;
+    
+    
+    if (indexPath.section == 0) {
+        switch (indexPath.row) {
+            case 0:
+                vc = [[JenkinsJobsForView alloc] init];
+                break;
+                
+            case 1:
+                vc = [[JenkinsJobsForView alloc] init];
+                break;
+                
+            case 2:
+                vc = [[JenkinsJobsForView alloc] init];
+                break;
+                
+            default:
+                break;
+        }
+    } else if (indexPath.section == 1) {
+        switch (indexPath.row) {
+            case 0:
+                vc = [[JenkinsJobsForView alloc] init];
+                break;
+                
+            case 1:
+                vc = [[JenkinsJobsForView alloc] init];
+                break;
+                
+            case 2:
+                vc = [[JenkinsJobsForView alloc] init];
+                break;
+                
+            default:
+                break;
+        }
+    } else if (indexPath.section == 2) {
+        switch (indexPath.row) {
+            case 0:
+                vc = [[JenkinsJobsForView alloc] init];
+                break;
+                
+            case 1:
+                vc = [[JenkinsJobsForView alloc] init];
+                break;
+                
+            default:
+                break;
+        }
+    } else if (indexPath.section == 3) {
+        switch (indexPath.row) {
+            case 0:
+                vc = [[JenkinsJobsForView alloc] init];
+                break;
+                
+            default:
+                break;
+        }
+    }
+    
+    if (vc) {
+        [self.navigationController pushViewController:vc animated:YES];
+        [vc release];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -156,11 +332,11 @@
     [super dealloc];
 }
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
-{
-    NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[managedObject valueForKey:@"timeStamp"] description];
-}
+//- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+//{
+//    NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
+//    cell.textLabel.text = [[managedObject valueForKey:@"timeStamp"] description];
+//}
 
 - (void)insertNewObject
 {
