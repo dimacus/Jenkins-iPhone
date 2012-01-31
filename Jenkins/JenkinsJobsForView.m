@@ -7,7 +7,7 @@
 //
 
 #import "JenkinsJobsForView.h"
-
+#import "JenkinsViewHelper.h"
 
 @implementation JenkinsJobsForView
 
@@ -49,11 +49,6 @@
     
     JenkinsJobsForViewTableData = [[NSMutableArray alloc] init];
     
-    [JenkinsJobsForViewTableData addObject:@"Hello World"];
-    [JenkinsJobsForViewTableData addObject:@"Hello World2"];
-    [JenkinsJobsForViewTableData addObject:@"Hello World3"];
-    
-    
     [JenkinsJobsForViewTable reloadData];
     
     
@@ -75,6 +70,9 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    [JenkinsViewHelper populateListOfJobsViewTable:JenkinsJobsForViewTableData withJobsFromJenkinsView:@"view"];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
