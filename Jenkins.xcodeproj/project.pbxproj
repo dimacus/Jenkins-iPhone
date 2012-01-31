@@ -43,6 +43,7 @@
 		323E339114D8982400404FC9 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 323E338514D8982400404FC9 /* AFURLConnectionOperation.m */; };
 		323E339214D8982400404FC9 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 323E338714D8982400404FC9 /* AFXMLRequestOperation.m */; };
 		323E339314D8982400404FC9 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 323E338914D8982400404FC9 /* UIImageView+AFNetworking.m */; };
+		323E339614D898CA00404FC9 /* DataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 323E339514D898CA00404FC9 /* DataHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,8 @@
 		323E338714D8982400404FC9 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		323E338814D8982400404FC9 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		323E338914D8982400404FC9 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		323E339414D898CA00404FC9 /* DataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHelper.h; sourceTree = "<group>"; };
+		323E339514D898CA00404FC9 /* DataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,12 +257,8 @@
 			isa = PBXGroup;
 			children = (
 				323E336914D8964700404FC9 /* ExternalFrameworks */,
-				323E335914D88F7600404FC9 /* JenkinsViewHelper.h */,
-				323E335A14D88F7600404FC9 /* JenkinsViewHelper.m */,
-				323E336E14D8973A00404FC9 /* DictionaryHelper.h */,
-				323E336F14D8973A00404FC9 /* DictionaryHelper.m */,
-				323E337114D8977500404FC9 /* StringHelper.h */,
-				323E337214D8977500404FC9 /* StringHelper.m */,
+				323E339814D8991000404FC9 /* JenkinsHelpers */,
+				323E339714D898E800404FC9 /* DataManupulationHelpers */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -308,6 +307,28 @@
 				323E338914D8982400404FC9 /* UIImageView+AFNetworking.m */,
 			);
 			name = AFNetworking;
+			sourceTree = "<group>";
+		};
+		323E339714D898E800404FC9 /* DataManupulationHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				323E336E14D8973A00404FC9 /* DictionaryHelper.h */,
+				323E336F14D8973A00404FC9 /* DictionaryHelper.m */,
+				323E337114D8977500404FC9 /* StringHelper.h */,
+				323E337214D8977500404FC9 /* StringHelper.m */,
+				323E339414D898CA00404FC9 /* DataHelper.h */,
+				323E339514D898CA00404FC9 /* DataHelper.m */,
+			);
+			name = DataManupulationHelpers;
+			sourceTree = "<group>";
+		};
+		323E339814D8991000404FC9 /* JenkinsHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				323E335914D88F7600404FC9 /* JenkinsViewHelper.h */,
+				323E335A14D88F7600404FC9 /* JenkinsViewHelper.m */,
+			);
+			name = JenkinsHelpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,6 +456,7 @@
 				323E339114D8982400404FC9 /* AFURLConnectionOperation.m in Sources */,
 				323E339214D8982400404FC9 /* AFXMLRequestOperation.m in Sources */,
 				323E339314D8982400404FC9 /* UIImageView+AFNetworking.m in Sources */,
+				323E339614D898CA00404FC9 /* DataHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
