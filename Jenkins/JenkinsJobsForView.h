@@ -9,8 +9,12 @@
 #import <UIKit/UIKit.h>
 
 
-@interface JenkinsJobsForView : UITableViewController {
+@interface JenkinsJobsForView : UITableViewController <UITableViewDelegate, UITableViewDataSource> {
     
 }
+
+
+@property (nonatomic, retain) IBOutlet UITableView* JenkinsJobsForViewTable;
+@property (nonatomic, retain) NSMutableArray* JenkinsJobsForViewTableData;
 
 @end

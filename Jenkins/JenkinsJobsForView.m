@@ -11,6 +11,10 @@
 
 @implementation JenkinsJobsForView
 
+@synthesize JenkinsJobsForViewTable;
+@synthesize JenkinsJobsForViewTableData;
+
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -22,6 +26,8 @@
 
 - (void)dealloc
 {
+    [JenkinsJobsForViewTable dealloc];
+    [JenkinsJobsForViewTableData dealloc];
     [super dealloc];
 }
 
@@ -38,6 +44,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.title = @"dima";
+    
+    JenkinsJobsForViewTableData = [[NSMutableArray alloc] init];
+    
+    [JenkinsJobsForViewTableData addObject:@"Hello World"];
+    [JenkinsJobsForViewTableData addObject:@"Hello World2"];
+    [JenkinsJobsForViewTableData addObject:@"Hello World3"];
+    
+    
+    [JenkinsJobsForViewTable reloadData];
+    
+    
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -80,19 +99,14 @@
 }
 
 #pragma mark - Table view data source
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [JenkinsJobsForViewTableData count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -104,8 +118,11 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    // Configure the cell...
+    NSString *cellValue = [JenkinsJobsForViewTableData objectAtIndex:indexPath.row];
+    cell.textLabel.text = cellValue;
     
+    
+    cellValue = nil;
     return cell;
 }
 
