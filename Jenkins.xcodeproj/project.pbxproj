@@ -30,6 +30,7 @@
 		323E335B14D88F7600404FC9 /* JenkinsViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 323E335A14D88F7600404FC9 /* JenkinsViewHelper.m */; };
 		323E336514D8936500404FC9 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323E336414D8936500404FC9 /* CFNetwork.framework */; };
 		323E336714D8956500404FC9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323E336614D8956500404FC9 /* SystemConfiguration.framework */; };
+		323E336C14D8966000404FC9 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 323E336B14D8966000404FC9 /* JSONKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		323E336414D8936500404FC9 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		323E336614D8956500404FC9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		323E336814D895A100404FC9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		323E336A14D8966000404FC9 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		323E336B14D8966000404FC9 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,10 +216,28 @@
 		323E335814D88D6F00404FC9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				323E336914D8964700404FC9 /* ExternalFrameworks */,
 				323E335914D88F7600404FC9 /* JenkinsViewHelper.h */,
 				323E335A14D88F7600404FC9 /* JenkinsViewHelper.m */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		323E336914D8964700404FC9 /* ExternalFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				323E336D14D8966600404FC9 /* JSONKit */,
+			);
+			name = ExternalFrameworks;
+			sourceTree = "<group>";
+		};
+		323E336D14D8966600404FC9 /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				323E336A14D8966000404FC9 /* JSONKit.h */,
+				323E336B14D8966000404FC9 /* JSONKit.m */,
+			);
+			name = JSONKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +352,7 @@
 				323E332514D86C6200404FC9 /* RootViewController.m in Sources */,
 				323E335314D871CA00404FC9 /* JenkinsJobsForView.m in Sources */,
 				323E335B14D88F7600404FC9 /* JenkinsViewHelper.m in Sources */,
+				323E336C14D8966000404FC9 /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
