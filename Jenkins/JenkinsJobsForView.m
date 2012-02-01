@@ -52,7 +52,7 @@
 {
     [super viewDidLoad];
     
-    self.title = @"dima";
+    self.title = @"Infrastructure";
     
     
     JenkinsJobsForViewTableData = [[NSMutableArray alloc] init];
@@ -77,23 +77,7 @@
     [super viewDidAppear:animated];
     
     
-    
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://ci.jenkins-ci.org/view/All%20Unstable/api/json"]];
-    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        
-        for (id jobElement in [JSON objectForKey:@"jobs"]) {
-            [JenkinsJobsForViewTableData addObject:jobElement];
-        }
-        
-        [JenkinsJobsForViewTable reloadData];
-        
-    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
-        NSLog([error localizedDescription]);
-        //        label.text = @"error";
-        //        [SVProgressHUD dismissWithError:[error localizedDescription]];
-    }];
-    [operation start];
-    
+    [JenkinsViewHelper populateListOfJobsViewTable:JenkinsJobsForViewTable withData:JenkinsJobsForViewTableData withJobsFromJenkinsView:self.title];
     
     
 }

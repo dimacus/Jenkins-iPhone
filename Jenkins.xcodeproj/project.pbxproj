@@ -56,6 +56,8 @@
 		32C357F214D9D300000F5691 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C357E614D9D300000F5691 /* red.png */; };
 		32C357F314D9D300000F5691 /* terminal.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C357E714D9D300000F5691 /* terminal.png */; };
 		32C357F414D9D300000F5691 /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C357E814D9D300000F5691 /* yellow.png */; };
+		32C357F714D9D931000F5691 /* aborted.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C357F514D9D931000F5691 /* aborted.png */; };
+		32C357F814D9D931000F5691 /* disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C357F614D9D931000F5691 /* disabled.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +142,8 @@
 		32C357E614D9D300000F5691 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
 		32C357E714D9D300000F5691 /* terminal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = terminal.png; sourceTree = "<group>"; };
 		32C357E814D9D300000F5691 /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow.png; sourceTree = "<group>"; };
+		32C357F514D9D931000F5691 /* aborted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aborted.png; sourceTree = "<group>"; };
+		32C357F614D9D931000F5691 /* disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disabled.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -373,6 +377,8 @@
 				32C357E014D9D300000F5691 /* grey.png */,
 				32C357E114D9D300000F5691 /* health-00to19.png */,
 				32C357E214D9D300000F5691 /* health-20to39.png */,
+				32C357F514D9D931000F5691 /* aborted.png */,
+				32C357F614D9D931000F5691 /* disabled.png */,
 				32C357E314D9D300000F5691 /* health-40to59.png */,
 				32C357E414D9D300000F5691 /* health-60to79.png */,
 				32C357E514D9D300000F5691 /* health-80plus.png */,
@@ -466,6 +472,8 @@
 				32C357F214D9D300000F5691 /* red.png in Resources */,
 				32C357F314D9D300000F5691 /* terminal.png in Resources */,
 				32C357F414D9D300000F5691 /* yellow.png in Resources */,
+				32C357F714D9D931000F5691 /* aborted.png in Resources */,
+				32C357F814D9D931000F5691 /* disabled.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
