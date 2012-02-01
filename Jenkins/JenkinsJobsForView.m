@@ -148,7 +148,10 @@
     
     cell.textLabel.text = [[JenkinsJobsForViewTableData objectAtIndex:indexPath.row] stringForKey:@"name"];
     
-//    [TableCellHelper updateJobsViewCell:cell with:[JenkinsJobsForViewTableData objectAtIndex:indexPath.row]];
+    NSString* image = [NSString stringWithFormat:@"%@.png",[[JenkinsJobsForViewTableData objectAtIndex:indexPath.row] stringForKey:@"color"]];
+    cell.imageView.image = [UIImage imageNamed:image];
+    
+    image = nil;
 
     return cell;
 }
