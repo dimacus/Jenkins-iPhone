@@ -9,9 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface JenkinsJobsForView : UITableViewController <UITableViewDelegate, UITableViewDataSource> {
-    
-}
+@interface JenkinsJobsForView : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 
 @property (nonatomic, retain) IBOutlet UITableView* JenkinsJobsForViewTable;

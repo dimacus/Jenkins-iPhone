@@ -9,6 +9,13 @@
 #import "JenkinsJobsForView.h"
 #import "JenkinsViewHelper.h"
 
+
+#import "JSONKit.h"
+#import "DictionaryHelper.h"
+#import "StringHelper.h"
+#import "AFJSONRequestOperation.h"
+
+
 @implementation JenkinsJobsForView
 
 @synthesize JenkinsJobsForViewTable;
@@ -47,9 +54,9 @@
     
     self.title = @"dima";
     
+    
     JenkinsJobsForViewTableData = [[NSMutableArray alloc] init];
-    
-    
+
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -58,6 +65,40 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://ci.jenkins-ci.org/view/All%20Unstable/api/json"]];
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        
+        for (id jobElement in [JSON objectForKey:@"jobs"]) {
+            [JenkinsJobsForViewTableData addObject:jobElement];
+        }
+        
+        [JenkinsJobsForViewTable reloadData];
+        
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+        NSLog([error localizedDescription]);
+        //        label.text = @"error";
+        //        [SVProgressHUD dismissWithError:[error localizedDescription]];
+    }];
+    [operation start];
+    
+    
+    
+}
+
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -65,18 +106,6 @@
     // e.g. self.myOutlet = nil;
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-    [JenkinsViewHelper populateListOfJobsViewTable:JenkinsJobsForViewTable withData:JenkinsJobsForViewTableData withJobsFromJenkinsView:@"view"];
-    
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
 
 - (void)viewWillDisappear:(BOOL)animated
 {
@@ -114,11 +143,13 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    NSString *cellValue = [JenkinsJobsForViewTableData objectAtIndex:indexPath.row];
-    cell.textLabel.text = cellValue;
     
+//    [JenkinsJobsForViewTableData objectAtIndex:indexPath.row];
     
-    cellValue = nil;
+    cell.textLabel.text = [[JenkinsJobsForViewTableData objectAtIndex:indexPath.row] stringForKey:@"name"];
+    
+//    [TableCellHelper updateJobsViewCell:cell with:[JenkinsJobsForViewTableData objectAtIndex:indexPath.row]];
+
     return cell;
 }
 
