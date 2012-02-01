@@ -49,8 +49,6 @@
     
     JenkinsJobsForViewTableData = [[NSMutableArray alloc] init];
     
-    [JenkinsJobsForViewTable reloadData];
-    
     
 
     // Uncomment the following line to preserve selection between presentations.
@@ -71,7 +69,7 @@
 {
     [super viewWillAppear:animated];
     
-    [JenkinsViewHelper populateListOfJobsViewTable:JenkinsJobsForViewTableData withJobsFromJenkinsView:@"view"];
+    [JenkinsViewHelper populateListOfJobsViewTable:JenkinsJobsForViewTable withData:JenkinsJobsForViewTableData withJobsFromJenkinsView:@"view"];
     
 }
 
