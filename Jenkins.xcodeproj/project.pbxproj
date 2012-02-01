@@ -149,9 +149,6 @@
 		323E32FA14D86C6100404FC9 = {
 			isa = PBXGroup;
 			children = (
-				323E336814D895A100404FC9 /* CoreGraphics.framework */,
-				323E336614D8956500404FC9 /* SystemConfiguration.framework */,
-				323E336414D8936500404FC9 /* CFNetwork.framework */,
 				323E331114D86C6100404FC9 /* Jenkins */,
 				323E333514D86C6200404FC9 /* JenkinsTests */,
 				323E330814D86C6100404FC9 /* Frameworks */,
@@ -171,6 +168,9 @@
 		323E330814D86C6100404FC9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				323E336814D895A100404FC9 /* CoreGraphics.framework */,
+				323E336614D8956500404FC9 /* SystemConfiguration.framework */,
+				323E336414D8936500404FC9 /* CFNetwork.framework */,
 				323E330914D86C6100404FC9 /* UIKit.framework */,
 				323E330B14D86C6100404FC9 /* Foundation.framework */,
 				323E330D14D86C6100404FC9 /* CoreGraphics.framework */,
@@ -637,6 +637,7 @@
 				323E334414D86C6200404FC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		323E334514D86C6200404FC9 /* Build configuration list for PBXNativeTarget "JenkinsTests" */ = {
 			isa = XCConfigurationList;
@@ -645,6 +646,7 @@
 				323E334714D86C6200404FC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
