@@ -250,6 +250,7 @@
                 
             case 1:
                 vc = [[JenkinsJobsForView alloc] init];
+                vc.title = @"All";
                 break;
                 
             case 2:
