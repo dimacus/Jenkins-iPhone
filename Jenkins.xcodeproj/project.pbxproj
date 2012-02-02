@@ -60,6 +60,8 @@
 		32C357F814D9D931000F5691 /* disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C357F614D9D931000F5691 /* disabled.png */; };
 		32DC63DE14DB18C00040FF4B /* JenkinsListAllViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DC63DC14DB18C00040FF4B /* JenkinsListAllViews.m */; };
 		32DC63DF14DB18C00040FF4B /* JenkinsListAllViews.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32DC63DD14DB18C00040FF4B /* JenkinsListAllViews.xib */; };
+		32DC63E914DB2CA70040FF4B /* JenkinsJobView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DC63E714DB2CA70040FF4B /* JenkinsJobView.m */; };
+		32DC63EA14DB2CA70040FF4B /* JenkinsJobView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32DC63E814DB2CA70040FF4B /* JenkinsJobView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +151,9 @@
 		32DC63DB14DB18C00040FF4B /* JenkinsListAllViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JenkinsListAllViews.h; sourceTree = "<group>"; };
 		32DC63DC14DB18C00040FF4B /* JenkinsListAllViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JenkinsListAllViews.m; sourceTree = "<group>"; };
 		32DC63DD14DB18C00040FF4B /* JenkinsListAllViews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JenkinsListAllViews.xib; sourceTree = "<group>"; };
+		32DC63E614DB2CA70040FF4B /* JenkinsJobView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JenkinsJobView.h; sourceTree = "<group>"; };
+		32DC63E714DB2CA70040FF4B /* JenkinsJobView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JenkinsJobView.m; sourceTree = "<group>"; };
+		32DC63E814DB2CA70040FF4B /* JenkinsJobView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JenkinsJobView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +220,7 @@
 		323E331114D86C6100404FC9 /* Jenkins */ = {
 			isa = PBXGroup;
 			children = (
+				32DC63E014DB2C740040FF4B /* JenkinsJobView */,
 				32DC63D914DB18A40040FF4B /* JenkinsListAllViews */,
 				32C357DB14D9D2E3000F5691 /* Resources */,
 				323E335814D88D6F00404FC9 /* Helpers */,
@@ -405,6 +411,16 @@
 			name = JenkinsListAllViews;
 			sourceTree = "<group>";
 		};
+		32DC63E014DB2C740040FF4B /* JenkinsJobView */ = {
+			isa = PBXGroup;
+			children = (
+				32DC63E614DB2CA70040FF4B /* JenkinsJobView.h */,
+				32DC63E714DB2CA70040FF4B /* JenkinsJobView.m */,
+				32DC63E814DB2CA70040FF4B /* JenkinsJobView.xib */,
+			);
+			name = JenkinsJobView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -491,6 +507,7 @@
 				32C357F714D9D931000F5691 /* aborted.png in Resources */,
 				32C357F814D9D931000F5691 /* disabled.png in Resources */,
 				32DC63DF14DB18C00040FF4B /* JenkinsListAllViews.xib in Resources */,
+				32DC63EA14DB2CA70040FF4B /* JenkinsJobView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +564,7 @@
 				323E339314D8982400404FC9 /* UIImageView+AFNetworking.m in Sources */,
 				323E339614D898CA00404FC9 /* DataHelper.m in Sources */,
 				32DC63DE14DB18C00040FF4B /* JenkinsListAllViews.m in Sources */,
+				32DC63E914DB2CA70040FF4B /* JenkinsJobView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
