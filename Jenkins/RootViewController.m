@@ -11,6 +11,7 @@
 #import "JenkinsJobsForView.h"
 #import "JenkinsListAllViews.h"
 
+#import "JenkinsJobView.h"
 
 @implementation RootViewController
 
@@ -254,7 +255,7 @@
                 break;
                 
             case 2:
-                vc = [[JenkinsJobsForView alloc] init];
+                vc = [[JenkinsJobView alloc] init];
                 break;
                 
             default:
