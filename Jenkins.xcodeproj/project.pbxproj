@@ -58,6 +58,8 @@
 		32C357F414D9D300000F5691 /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C357E814D9D300000F5691 /* yellow.png */; };
 		32C357F714D9D931000F5691 /* aborted.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C357F514D9D931000F5691 /* aborted.png */; };
 		32C357F814D9D931000F5691 /* disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C357F614D9D931000F5691 /* disabled.png */; };
+		32DC63DE14DB18C00040FF4B /* JenkinsListAllViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DC63DC14DB18C00040FF4B /* JenkinsListAllViews.m */; };
+		32DC63DF14DB18C00040FF4B /* JenkinsListAllViews.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32DC63DD14DB18C00040FF4B /* JenkinsListAllViews.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +146,9 @@
 		32C357E814D9D300000F5691 /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow.png; sourceTree = "<group>"; };
 		32C357F514D9D931000F5691 /* aborted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aborted.png; sourceTree = "<group>"; };
 		32C357F614D9D931000F5691 /* disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disabled.png; sourceTree = "<group>"; };
+		32DC63DB14DB18C00040FF4B /* JenkinsListAllViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JenkinsListAllViews.h; sourceTree = "<group>"; };
+		32DC63DC14DB18C00040FF4B /* JenkinsListAllViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JenkinsListAllViews.m; sourceTree = "<group>"; };
+		32DC63DD14DB18C00040FF4B /* JenkinsListAllViews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JenkinsListAllViews.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +215,7 @@
 		323E331114D86C6100404FC9 /* Jenkins */ = {
 			isa = PBXGroup;
 			children = (
+				32DC63D914DB18A40040FF4B /* JenkinsListAllViews */,
 				32C357DB14D9D2E3000F5691 /* Resources */,
 				323E335814D88D6F00404FC9 /* Helpers */,
 				323E335714D88CDF00404FC9 /* Misc */,
@@ -389,6 +395,16 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		32DC63D914DB18A40040FF4B /* JenkinsListAllViews */ = {
+			isa = PBXGroup;
+			children = (
+				32DC63DB14DB18C00040FF4B /* JenkinsListAllViews.h */,
+				32DC63DC14DB18C00040FF4B /* JenkinsListAllViews.m */,
+				32DC63DD14DB18C00040FF4B /* JenkinsListAllViews.xib */,
+			);
+			name = JenkinsListAllViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -474,6 +490,7 @@
 				32C357F414D9D300000F5691 /* yellow.png in Resources */,
 				32C357F714D9D931000F5691 /* aborted.png in Resources */,
 				32C357F814D9D931000F5691 /* disabled.png in Resources */,
+				32DC63DF14DB18C00040FF4B /* JenkinsListAllViews.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +546,7 @@
 				323E339214D8982400404FC9 /* AFXMLRequestOperation.m in Sources */,
 				323E339314D8982400404FC9 /* UIImageView+AFNetworking.m in Sources */,
 				323E339614D898CA00404FC9 /* DataHelper.m in Sources */,
+				32DC63DE14DB18C00040FF4B /* JenkinsListAllViews.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

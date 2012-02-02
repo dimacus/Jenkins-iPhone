@@ -9,6 +9,7 @@
 #import "RootViewController.h"
 
 #import "JenkinsJobsForView.h"
+#import "JenkinsListAllViews.h"
 
 
 @implementation RootViewController
@@ -138,7 +139,7 @@
     if (indexPath.section == 0) {
         switch (indexPath.row) {
             case 0:
-                cell.textLabel.text = @"Views";
+                cell.textLabel.text = @"All Views";
                 cell.detailTextLabel.text = @"Show all configured views";
                 break;
                 
@@ -244,7 +245,7 @@
     if (indexPath.section == 0) {
         switch (indexPath.row) {
             case 0:
-                vc = [[JenkinsJobsForView alloc] init];
+                vc = [[JenkinsListAllViews alloc] init];
                 break;
                 
             case 1:
