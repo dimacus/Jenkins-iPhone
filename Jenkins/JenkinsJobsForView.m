@@ -8,6 +8,7 @@
 
 #import "JenkinsJobsForView.h"
 #import "JenkinsViewHelper.h"
+#import "JenkinsJobView.h"
 
 
 #import "JSONKit.h"
@@ -190,14 +191,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+    
+    UIViewController* vc = nil;
+    vc = [[JenkinsJobView alloc] init];
+    vc.title = [[JenkinsJobsForViewTableData objectAtIndex:indexPath.row] stringForKey:@"name"];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+    [vc release];
+
 }
 
 @end
