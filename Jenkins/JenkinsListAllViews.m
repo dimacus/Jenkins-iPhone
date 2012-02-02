@@ -182,8 +182,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    [JenkinsListAllViewsTable deselectRowAtIndexPath:indexPath animated:YES];
-    
     UIViewController* vc = nil;
     vc = [[JenkinsJobsForView alloc] init];
     vc.title = [JenkinsListAllViewsTableData objectAtIndex:indexPath.row];
