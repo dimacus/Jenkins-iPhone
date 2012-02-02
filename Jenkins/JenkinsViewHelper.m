@@ -20,6 +20,8 @@
     
     NSString* url = [NSString stringWithFormat:@"http://ci.jenkins-ci.org/view/%@/api/json", jenkinsJobView];
     
+    
+    url = [url urlEncode];
         
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
@@ -49,6 +51,7 @@
 
     NSString* url = @"http://ci.jenkins-ci.org/api/json?tree=views[name]";
     
+    url = [url urlEncode];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
