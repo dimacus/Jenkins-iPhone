@@ -13,6 +13,9 @@
 
 
 @property (nonatomic, retain) IBOutlet UITableView* JenkinsListAllViewsTable;
+@property (nonatomic, retain) IBOutlet UISearchDisplayController *searchBar;
+
 @property (nonatomic, retain) NSMutableArray* JenkinsListAllViewsTableData;
+@property (nonatomic, retain) NSArray *searchResults;
 
 @end

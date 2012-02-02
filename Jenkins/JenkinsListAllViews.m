@@ -14,19 +14,23 @@
 
 @synthesize JenkinsListAllViewsTable;
 @synthesize JenkinsListAllViewsTableData;
+@synthesize searchBar;
+@synthesize searchResults;
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+//- (id)initWithStyle:(UITableViewStyle)style
+//{
+//    self = [super initWithStyle:style];
+//    if (self) {
+//        // Custom initialization
+//    }
+//    return self;
+//}
 
 - (void)dealloc
 {
     [JenkinsListAllViewsTable dealloc];
+    [searchBar dealloc];
+    [searchResults dealloc];
     [JenkinsListAllViewsTableData dealloc];
     [super dealloc];
 }
@@ -45,6 +49,7 @@
 {
     [super viewDidLoad];
     
+    self.title = @"All Views";
     
     JenkinsListAllViewsTableData = [[NSMutableArray alloc] init];
 
@@ -99,7 +104,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [JenkinsListAllViewsTableData count];
+    if([tableView isEqual:self.searchDisplayController.searchResultsTableView]){
+        return [searchResults count];
+    } else {
+        return [JenkinsListAllViewsTableData count];
+    }
+    
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -112,7 +123,16 @@
     }
     
     
-    cell.textLabel.text = [JenkinsListAllViewsTableData objectAtIndex:indexPath.row];
+    if([tableView isEqual:self.searchDisplayController.searchResultsTableView]){
+        
+        cell.textLabel.text = [self.searchResults objectAtIndex:indexPath.row];
+        
+    } else {
+        
+        cell.textLabel.text = [JenkinsListAllViewsTableData objectAtIndex:indexPath.row];        
+        
+    }
+    
     
     return cell;
 }
@@ -169,5 +189,40 @@
      [detailViewController release];
      */
 }
+
+
+#pragma mark - UISearchDisplayController delegate methods
+
+- (void)filterContentForSearchText:(NSString*)searchText 
+                             scope:(NSString*)scope
+{
+    NSPredicate *resultPredicate = [NSPredicate 
+                                    predicateWithFormat:@"SELF contains[cd] %@",
+                                    searchText];
+    
+    self.searchResults = [self.JenkinsListAllViewsTableData filteredArrayUsingPredicate:resultPredicate];
+}
+
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller 
+shouldReloadTableForSearchString:(NSString *)searchString
+{
+    [self filterContentForSearchText:searchString 
+                               scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
+                                      objectAtIndex:[self.searchDisplayController.searchBar
+                                                     selectedScopeButtonIndex]]];
+    
+    return YES;
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller 
+shouldReloadTableForSearchScope:(NSInteger)searchOption
+{
+    [self filterContentForSearchText:[self.searchDisplayController.searchBar text] 
+                               scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
+                                      objectAtIndex:searchOption]];
+    
+    return YES;
+}
+
 
 @end
