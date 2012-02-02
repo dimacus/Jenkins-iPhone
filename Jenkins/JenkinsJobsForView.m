@@ -61,7 +61,7 @@
 //    NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
 //    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
     
-    self.title = @"Infrastructure";
+//    self.title = @"Infrastructure";
     
     
     JenkinsJobsForViewTableData = [[NSMutableArray alloc] init];

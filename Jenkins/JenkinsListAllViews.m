@@ -8,6 +8,7 @@
 
 #import "JenkinsListAllViews.h"
 #import "JenkinsViewHelper.h"
+#import "JenkinsJobsForView.h"
 
 
 @implementation JenkinsListAllViews
@@ -180,14 +181,16 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+    
+    [JenkinsListAllViewsTable deselectRowAtIndexPath:indexPath animated:YES];
+    
+    UIViewController* vc = nil;
+    vc = [[JenkinsJobsForView alloc] init];
+    vc.title = [JenkinsListAllViewsTableData objectAtIndex:indexPath.row];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+    [vc release];
+    
 }
 
 
