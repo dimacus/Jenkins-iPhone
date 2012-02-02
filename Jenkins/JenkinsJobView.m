@@ -7,9 +7,15 @@
 //
 
 #import "JenkinsJobView.h"
-
+#import "JobHelper.h"
 
 @implementation JenkinsJobView
+
+@synthesize titleLabel;
+@synthesize buildHealthLabel;
+@synthesize buildStatusLabel;
+@synthesize statusImage;
+@synthesize healthImage;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -22,6 +28,11 @@
 
 - (void)dealloc
 {
+    [statusImage dealloc];
+    [healthImage dealloc];
+    [titleLabel dealloc];
+    [buildStatusLabel dealloc];
+    [buildStatusLabel dealloc];
     [super dealloc];
 }
 
@@ -38,8 +49,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    titleLabel.text = self.title;
+
 }
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+        
+    NSMutableDictionary* listOfItemsOnScreen = [[NSMutableDictionary alloc] init];
+    
+    [listOfItemsOnScreen setObject:buildStatusLabel forKey:@"status"];
+    [listOfItemsOnScreen setObject:buildHealthLabel forKey:@"health"];
+    
+    [JobHelper populateJenkinsJobView:listOfItemsOnScreen jobName:self.title];
+     
+    listOfItemsOnScreen = nil;
+
+}
+
 
 - (void)viewDidUnload
 {
