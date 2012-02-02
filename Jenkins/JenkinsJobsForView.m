@@ -18,6 +18,10 @@
 
 @implementation JenkinsJobsForView
 
+
+@synthesize fetchedResultsController=__fetchedResultsController;
+@synthesize managedObjectContext=__managedObjectContext;
+
 @synthesize JenkinsJobsForViewTable;
 @synthesize JenkinsJobsForViewTableData;
 
@@ -51,6 +55,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
+    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
     
     self.title = @"Infrastructure";
     

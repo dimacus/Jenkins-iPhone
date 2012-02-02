@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+
+@interface JenkinsJobsForView : UIViewController <UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate>
 
 
-@interface JenkinsJobsForView : UIViewController <UITableViewDelegate, UITableViewDataSource>
-
+@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 @property (nonatomic, retain) IBOutlet UITableView* JenkinsJobsForViewTable;
 @property (nonatomic, retain) NSMutableArray* JenkinsJobsForViewTableData;
