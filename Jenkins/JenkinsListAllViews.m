@@ -51,8 +51,6 @@
     [super viewDidLoad];
     
     self.title = @"All Views";
-    
-    JenkinsListAllViewsTableData = [[NSMutableArray alloc] init];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -76,6 +74,8 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+    JenkinsListAllViewsTableData = [[NSMutableArray alloc] init];
     
     [JenkinsViewHelper populateListOfAllViewsTable:JenkinsListAllViewsTable withData:JenkinsListAllViewsTableData];
 }

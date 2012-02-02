@@ -62,9 +62,6 @@
 //    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
     
 //    self.title = @"Infrastructure";
-    
-    
-    JenkinsJobsForViewTableData = [[NSMutableArray alloc] init];
 
 
     // Uncomment the following line to preserve selection between presentations.
@@ -85,6 +82,7 @@
 {
     [super viewDidAppear:animated];
     
+    JenkinsJobsForViewTableData = [[NSMutableArray alloc] init];
     
     [JenkinsViewHelper populateListOfJobsViewTable:JenkinsJobsForViewTable withData:JenkinsJobsForViewTableData withJobsFromJenkinsView:self.title];
     
