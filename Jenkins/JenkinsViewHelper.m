@@ -15,11 +15,6 @@
 @implementation JenkinsViewHelper
 
 
-+ (void) getListOfJobsForView:(NSString*)jenkinsViewToFind{
-    
-    
-    
-}
 
 + (void) populateListOfJobsViewTable:(id)viewTable withData:(id)viewTableData withJobsFromJenkinsView:(NSString*)jenkinsJobView{
     
@@ -46,6 +41,38 @@
         [alert release];
     }];
     [operation start];
+    
+}
+
+
++ (void) populateListOfAllViewsTable:(id)viewTable withData:(id)viewTableData{
+
+    NSString* url = @"http://ci.jenkins-ci.org/api/json?tree=views[name]";
+    
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        
+        
+        
+        for (id jenkinsView in [JSON objectForKey:@"views"]) {
+            [viewTableData addObject:[jenkinsView stringForKey:@"name"]];
+        }
+        
+        [viewTable reloadData];
+        
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error retriving Views" 
+                                                        message:[error localizedDescription] 
+                                                       delegate:nil 
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        [alert release];
+    }];
+    [operation start];
+    
     
 }
 

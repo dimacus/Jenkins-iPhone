@@ -13,8 +13,9 @@
     
 }
 
-+ (void) getListOfJobsForView:(NSString*)jenkinsViewToFind;
 
 + (void) populateListOfJobsViewTable:(id)viewTable withData:(id)viewTableData withJobsFromJenkinsView:(NSString*)jenkinsJobView;
+
++ (void) populateListOfAllViewsTable:(id)viewTable withData:(id)viewTableData;
 
 @end

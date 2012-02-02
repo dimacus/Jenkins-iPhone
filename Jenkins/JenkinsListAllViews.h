@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface JenkinsListAllViews : UITableViewController <UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate>
+@interface JenkinsListAllViews : UIViewController <UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate>
 
 
 @property (nonatomic, retain) IBOutlet UITableView* JenkinsListAllViewsTable;
