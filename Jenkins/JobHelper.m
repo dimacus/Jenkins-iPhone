@@ -74,7 +74,7 @@
     
     if ([jobColor containsString:@"_anime"]) {
         [imageArray addObject:[UIImage imageNamed:jobColor]];
-        [imageArray addObject:[UIImage imageNamed:@"grey.png"]]; 
+        [imageArray addObject:[UIImage imageNamed:@"blank.png"]]; 
     } else {
         [imageArray addObject:[UIImage imageNamed:jobColor]];
     }
