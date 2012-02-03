@@ -61,6 +61,7 @@
 		32C357F414D9D300000F5691 /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C357E814D9D300000F5691 /* yellow.png */; };
 		32C357F714D9D931000F5691 /* aborted.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C357F514D9D931000F5691 /* aborted.png */; };
 		32C357F814D9D931000F5691 /* disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C357F614D9D931000F5691 /* disabled.png */; };
+		32CCEFFC14DBBD0300CF66C0 /* package.png in Resources */ = {isa = PBXBuildFile; fileRef = 32CCEFFB14DBBD0300CF66C0 /* package.png */; };
 		32DC63DE14DB18C00040FF4B /* JenkinsListAllViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DC63DC14DB18C00040FF4B /* JenkinsListAllViews.m */; };
 		32DC63DF14DB18C00040FF4B /* JenkinsListAllViews.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32DC63DD14DB18C00040FF4B /* JenkinsListAllViews.xib */; };
 		32DC63E914DB2CA70040FF4B /* JenkinsJobView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DC63E714DB2CA70040FF4B /* JenkinsJobView.m */; };
@@ -159,6 +160,7 @@
 		32C357E814D9D300000F5691 /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow.png; sourceTree = "<group>"; };
 		32C357F514D9D931000F5691 /* aborted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aborted.png; sourceTree = "<group>"; };
 		32C357F614D9D931000F5691 /* disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disabled.png; sourceTree = "<group>"; };
+		32CCEFFB14DBBD0300CF66C0 /* package.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = package.png; sourceTree = "<group>"; };
 		32DC63DB14DB18C00040FF4B /* JenkinsListAllViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JenkinsListAllViews.h; sourceTree = "<group>"; };
 		32DC63DC14DB18C00040FF4B /* JenkinsListAllViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JenkinsListAllViews.m; sourceTree = "<group>"; };
 		32DC63DD14DB18C00040FF4B /* JenkinsListAllViews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JenkinsListAllViews.xib; sourceTree = "<group>"; };
@@ -411,6 +413,7 @@
 			isa = PBXGroup;
 			children = (
 				32C357DD14D9D300000F5691 /* blue.png */,
+				32CCEFFB14DBBD0300CF66C0 /* package.png */,
 				32C357DE14D9D300000F5691 /* clipboard.png */,
 				32C0F56214DB70B5008EB543 /* folder.png */,
 				32C0F56014DB6F12008EB543 /* blank.png */,
@@ -549,6 +552,7 @@
 				32C0F55E14DB6F06008EB543 /* aborted_anime.png in Resources */,
 				32C0F56114DB6F12008EB543 /* blank.png in Resources */,
 				32C0F56314DB70B5008EB543 /* folder.png in Resources */,
+				32CCEFFC14DBBD0300CF66C0 /* package.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

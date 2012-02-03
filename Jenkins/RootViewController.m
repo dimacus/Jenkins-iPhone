@@ -265,7 +265,7 @@
     } else if (indexPath.section == 1) {
         switch (indexPath.row) {
             case 0:
-                vc = [[JenkinsJobsForView alloc] init];
+                vc = [[JenkinsJobView alloc] init];
                 break;
                 
             case 1:

@@ -16,6 +16,7 @@
 @synthesize buildStatusLabel;
 @synthesize statusImage;
 @synthesize healthImage;
+@synthesize tabBar;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +34,7 @@
     [titleLabel release];
     [buildStatusLabel release];
     [buildHealthLabel release];
+    [tabBar release];
     [super dealloc];
 }
 
@@ -50,6 +52,7 @@
 {
     [super viewDidLoad];
     titleLabel.text = self.title;
+    self.tabBar.selectedItem = [tabBar.items objectAtIndex:0];
 
 }
 
@@ -82,6 +85,13 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
+//    
+    
+     
+   NSLog(@"Tab clicked: %d", item.tag);
 }
 
 @end

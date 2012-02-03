@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 
-@interface JenkinsJobView : UIViewController {
-    
+@interface JenkinsJobView : UIViewController <UITabBarDelegate> {
+    UITabBar *tabBar;
 }
 
 @property (nonatomic, retain) IBOutlet UILabel *titleLabel;
@@ -18,6 +18,6 @@
 @property (nonatomic, retain) IBOutlet UILabel *buildHealthLabel;
 @property (nonatomic, retain) IBOutlet UIImageView* statusImage;
 @property (nonatomic, retain) IBOutlet UIImageView* healthImage;
-
+@property (nonatomic, assign) IBOutlet UITabBar *tabBar;
 
 @end
