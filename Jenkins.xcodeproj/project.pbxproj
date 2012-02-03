@@ -237,14 +237,12 @@
 		323E331114D86C6100404FC9 /* Jenkins */ = {
 			isa = PBXGroup;
 			children = (
-				32DC63E014DB2C740040FF4B /* JenkinsJobView */,
-				32DC63D914DB18A40040FF4B /* JenkinsListAllViews */,
+				329F0DB014DB7AF000AABFD0 /* JenkinsViews */,
 				32C357DB14D9D2E3000F5691 /* Resources */,
 				323E335814D88D6F00404FC9 /* Helpers */,
 				323E335714D88CDF00404FC9 /* Misc */,
 				323E335614D88CC500404FC9 /* RootViewController */,
 				323E331214D86C6100404FC9 /* Supporting Files */,
-				323E335514D8721200404FC9 /* JenkinsJobsForView */,
 			);
 			path = Jenkins;
 			sourceTree = "<group>";
@@ -389,6 +387,16 @@
 				323E335A14D88F7600404FC9 /* JenkinsViewHelper.m */,
 			);
 			name = JenkinsHelpers;
+			sourceTree = "<group>";
+		};
+		329F0DB014DB7AF000AABFD0 /* JenkinsViews */ = {
+			isa = PBXGroup;
+			children = (
+				32DC63E014DB2C740040FF4B /* JenkinsJobView */,
+				32DC63D914DB18A40040FF4B /* JenkinsListAllViews */,
+				323E335514D8721200404FC9 /* JenkinsJobsForView */,
+			);
+			name = JenkinsViews;
 			sourceTree = "<group>";
 		};
 		32C357DB14D9D2E3000F5691 /* Resources */ = {
