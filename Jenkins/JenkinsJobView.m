@@ -28,11 +28,11 @@
 
 - (void)dealloc
 {
-    [statusImage dealloc];
-    [healthImage dealloc];
-    [titleLabel dealloc];
-    [buildStatusLabel dealloc];
-    [buildStatusLabel dealloc];
+    [statusImage release];
+    [healthImage release];
+    [titleLabel release];
+    [buildStatusLabel release];
+    [buildHealthLabel release];
     [super dealloc];
 }
 

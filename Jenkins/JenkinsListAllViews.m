@@ -29,10 +29,10 @@
 
 - (void)dealloc
 {
-    [JenkinsListAllViewsTable dealloc];
-    [searchBar dealloc];
-    [searchResults dealloc];
-    [JenkinsListAllViewsTableData dealloc];
+    [JenkinsListAllViewsTable release];
+    [searchBar release];
+    [searchResults release];
+    [JenkinsListAllViewsTableData release];
     [super dealloc];
 }
 

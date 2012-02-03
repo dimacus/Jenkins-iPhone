@@ -38,8 +38,8 @@
 
 - (void)dealloc
 {
-    [JenkinsJobsForViewTable dealloc];
-    [JenkinsJobsForViewTableData dealloc];
+    [JenkinsJobsForViewTable release];
+    [JenkinsJobsForViewTableData release];
     [super dealloc];
 }
 
