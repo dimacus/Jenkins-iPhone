@@ -24,9 +24,7 @@
     UIImageView* healthImage = [listOfLabels objectForKey:@"health_image"];
     
         
-//    NSString* url = [NSString stringWithFormat:@"http://ci.jenkins-ci.org/job/%@/api/json", jobName];
-    NSString* url = @"http://buildmaster:8080/job/DimaSeleniumFF/api/json";    
-    
+    NSString* url = [NSString stringWithFormat:@"http://ci.jenkins-ci.org/job/%@/api/json", jobName];    
     
     url = [url urlEncode];
     
