@@ -147,11 +147,13 @@
 								<reference key="IBUITabBar" ref="89012028"/>
 							</object>
 							<object class="IBUITabBarItem" id="340908804">
+								<int key="IBUITag">1</int>
 								<string key="IBUITitle">Job Details</string>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<reference key="IBUITabBar" ref="89012028"/>
 							</object>
 							<object class="IBUITabBarItem" id="411656830">
+								<int key="IBUITag">2</int>
 								<string key="IBUITitle">Build History</string>
 								<object class="NSCustomResource" key="IBUIImage">
 									<string key="NSClassName">NSImage</string>
@@ -161,7 +163,7 @@
 								<reference key="IBUITabBar" ref="89012028"/>
 							</object>
 							<object class="IBUITabBarItem" id="532732164">
-								<int key="IBUITag">2</int>
+								<int key="IBUITag">3</int>
 								<string key="IBUITitle">Build Now</string>
 								<object class="NSCustomResource" key="IBUIImage">
 									<string key="NSClassName">NSImage</string>
