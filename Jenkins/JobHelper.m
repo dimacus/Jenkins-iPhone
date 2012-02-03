@@ -25,7 +25,7 @@
     
         
 //    NSString* url = [NSString stringWithFormat:@"http://ci.jenkins-ci.org/job/%@/api/json", jobName];
-    NSString* url = @"http://buildmaster:8080/job/Groupon-Master-Git/api/json";    
+    NSString* url = @"http://buildmaster:8080/job/DimaSeleniumFF/api/json";    
     
     
     url = [url urlEncode];
@@ -95,7 +95,9 @@
         return @"Building";
     } else if ([jsonResponse objectForKey:@"inQueue"] == kCFBooleanFalse) {
      return @"Not building and nothing in queue";
-    } else {
+    } else if ([jsonResponse objectForKey:@"inQueue"] == kCFBooleanTrue){
+        return [[jsonResponse objectForKey:@"queueItem"] stringForKey:@"why"];
+    }else {
      return @"Build in the queue";   
     }
     

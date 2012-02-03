@@ -256,6 +256,7 @@
                 
             case 2:
                 vc = [[JenkinsJobView alloc] init];
+                vc.title = @"infra_main_svn_to_git";
                 break;
                 
             default:
