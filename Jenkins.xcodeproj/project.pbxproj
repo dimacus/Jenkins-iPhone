@@ -62,6 +62,11 @@
 		32DC63DF14DB18C00040FF4B /* JenkinsListAllViews.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32DC63DD14DB18C00040FF4B /* JenkinsListAllViews.xib */; };
 		32DC63E914DB2CA70040FF4B /* JenkinsJobView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DC63E714DB2CA70040FF4B /* JenkinsJobView.m */; };
 		32DC63EA14DB2CA70040FF4B /* JenkinsJobView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32DC63E814DB2CA70040FF4B /* JenkinsJobView.xib */; };
+		32DC63EE14DB47B50040FF4B /* JobHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DC63ED14DB47B50040FF4B /* JobHelper.m */; };
+		32DC63FB14DB679E0040FF4B /* blue_anime.png in Resources */ = {isa = PBXBuildFile; fileRef = 32DC63F714DB679D0040FF4B /* blue_anime.png */; };
+		32DC63FC14DB679E0040FF4B /* grey_anime.png in Resources */ = {isa = PBXBuildFile; fileRef = 32DC63F814DB679E0040FF4B /* grey_anime.png */; };
+		32DC63FD14DB679E0040FF4B /* red_anime.png in Resources */ = {isa = PBXBuildFile; fileRef = 32DC63F914DB679E0040FF4B /* red_anime.png */; };
+		32DC63FE14DB679E0040FF4B /* yellow_anime.png in Resources */ = {isa = PBXBuildFile; fileRef = 32DC63FA14DB679E0040FF4B /* yellow_anime.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +159,12 @@
 		32DC63E614DB2CA70040FF4B /* JenkinsJobView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JenkinsJobView.h; sourceTree = "<group>"; };
 		32DC63E714DB2CA70040FF4B /* JenkinsJobView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JenkinsJobView.m; sourceTree = "<group>"; };
 		32DC63E814DB2CA70040FF4B /* JenkinsJobView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JenkinsJobView.xib; sourceTree = "<group>"; };
+		32DC63EC14DB47B50040FF4B /* JobHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobHelper.h; sourceTree = "<group>"; };
+		32DC63ED14DB47B50040FF4B /* JobHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobHelper.m; sourceTree = "<group>"; };
+		32DC63F714DB679D0040FF4B /* blue_anime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_anime.png; sourceTree = "<group>"; };
+		32DC63F814DB679E0040FF4B /* grey_anime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grey_anime.png; sourceTree = "<group>"; };
+		32DC63F914DB679E0040FF4B /* red_anime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_anime.png; sourceTree = "<group>"; };
+		32DC63FA14DB679E0040FF4B /* yellow_anime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow_anime.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -366,6 +377,8 @@
 		323E339814D8991000404FC9 /* JenkinsHelpers */ = {
 			isa = PBXGroup;
 			children = (
+				32DC63EC14DB47B50040FF4B /* JobHelper.h */,
+				32DC63ED14DB47B50040FF4B /* JobHelper.m */,
 				323E335914D88F7600404FC9 /* JenkinsViewHelper.h */,
 				323E335A14D88F7600404FC9 /* JenkinsViewHelper.m */,
 			);
@@ -393,6 +406,10 @@
 				32C357F614D9D931000F5691 /* disabled.png */,
 				32C357E314D9D300000F5691 /* health-40to59.png */,
 				32C357E414D9D300000F5691 /* health-60to79.png */,
+				32DC63F714DB679D0040FF4B /* blue_anime.png */,
+				32DC63F814DB679E0040FF4B /* grey_anime.png */,
+				32DC63F914DB679E0040FF4B /* red_anime.png */,
+				32DC63FA14DB679E0040FF4B /* yellow_anime.png */,
 				32C357E514D9D300000F5691 /* health-80plus.png */,
 				32C357E614D9D300000F5691 /* red.png */,
 				32C357E714D9D300000F5691 /* terminal.png */,
@@ -508,6 +525,10 @@
 				32C357F814D9D931000F5691 /* disabled.png in Resources */,
 				32DC63DF14DB18C00040FF4B /* JenkinsListAllViews.xib in Resources */,
 				32DC63EA14DB2CA70040FF4B /* JenkinsJobView.xib in Resources */,
+				32DC63FB14DB679E0040FF4B /* blue_anime.png in Resources */,
+				32DC63FC14DB679E0040FF4B /* grey_anime.png in Resources */,
+				32DC63FD14DB679E0040FF4B /* red_anime.png in Resources */,
+				32DC63FE14DB679E0040FF4B /* yellow_anime.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +586,7 @@
 				323E339614D898CA00404FC9 /* DataHelper.m in Sources */,
 				32DC63DE14DB18C00040FF4B /* JenkinsListAllViews.m in Sources */,
 				32DC63E914DB2CA70040FF4B /* JenkinsJobView.m in Sources */,
+				32DC63EE14DB47B50040FF4B /* JobHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

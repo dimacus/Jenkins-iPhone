@@ -66,6 +66,10 @@
 							</object>
 							<object class="IBUITabBarItem" id="487843364">
 								<string key="IBUITitle">Build Now</string>
+								<object class="NSCustomResource" key="IBUIImage">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">clock.png</string>
+								</object>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<reference key="IBUITabBar" ref="912419190"/>
 							</object>
@@ -77,7 +81,7 @@
 						<string key="NSFrame">{{20, 20}, {280, 21}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSNextKeyView" ref="898461892"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
@@ -99,7 +103,7 @@
 						<string key="NSFrame">{{65, 57}, {219, 32}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSNextKeyView" ref="602425736"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
@@ -134,21 +138,23 @@
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
 					</object>
-					<object class="IBUIImageView" id="1003994322">
+					<object class="IBUIImageView" id="898461892">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{25, 59}, {32, 30}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="530424139"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
-					<object class="IBUIImageView" id="729556642">
+					<object class="IBUIImageView" id="602425736">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{25, 113}, {32, 30}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="671280749"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
@@ -207,7 +213,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">healthImage</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="729556642"/>
+						<reference key="destination" ref="602425736"/>
 					</object>
 					<int key="connectionID">21</int>
 				</object>
@@ -215,7 +221,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">statusImage</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="1003994322"/>
+						<reference key="destination" ref="898461892"/>
 					</object>
 					<int key="connectionID">22</int>
 				</object>
@@ -236,8 +242,8 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="912419190"/>
 							<reference ref="732336156"/>
-							<reference ref="1003994322"/>
-							<reference ref="729556642"/>
+							<reference ref="898461892"/>
+							<reference ref="602425736"/>
 							<reference ref="671280749"/>
 							<reference ref="530424139"/>
 						</object>
@@ -291,12 +297,12 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">19</int>
-						<reference key="object" ref="1003994322"/>
+						<reference key="object" ref="898461892"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">20</int>
-						<reference key="object" ref="729556642"/>
+						<reference key="object" ref="602425736"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</object>
@@ -422,6 +428,10 @@
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
+		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="NS.key.0">clock.png</string>
+			<string key="NS.object.0">{24, 24}</string>
+		</object>
 		<string key="IBCocoaTouchPluginVersion">301</string>
 	</data>
 </archive>

@@ -61,6 +61,8 @@
     
     [listOfItemsOnScreen setObject:buildStatusLabel forKey:@"status"];
     [listOfItemsOnScreen setObject:buildHealthLabel forKey:@"health"];
+    [listOfItemsOnScreen setObject:statusImage forKey:@"status_image"];
+    [listOfItemsOnScreen setObject:healthImage forKey:@"health_image"];
     
     [JobHelper populateJenkinsJobView:listOfItemsOnScreen jobName:self.title];
      
