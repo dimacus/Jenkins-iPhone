@@ -71,6 +71,13 @@
 		32DC63FC14DB679E0040FF4B /* grey_anime.png in Resources */ = {isa = PBXBuildFile; fileRef = 32DC63F814DB679E0040FF4B /* grey_anime.png */; };
 		32DC63FD14DB679E0040FF4B /* red_anime.png in Resources */ = {isa = PBXBuildFile; fileRef = 32DC63F914DB679E0040FF4B /* red_anime.png */; };
 		32DC63FE14DB679E0040FF4B /* yellow_anime.png in Resources */ = {isa = PBXBuildFile; fileRef = 32DC63FA14DB679E0040FF4B /* yellow_anime.png */; };
+		32E557CC14DC28DA0076C0A6 /* computer.png in Resources */ = {isa = PBXBuildFile; fileRef = 32E557CB14DC28DA0076C0A6 /* computer.png */; };
+		32E557EA14DCAAC80076C0A6 /* JenkinsJobDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E557E814DCAAC80076C0A6 /* JenkinsJobDetailsView.m */; };
+		32E557EB14DCAAC80076C0A6 /* JenkinsJobDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32E557E914DCAAC80076C0A6 /* JenkinsJobDetailsView.xib */; };
+		32E557EF14DCAAE50076C0A6 /* JenkinsBuildTrigerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E557ED14DCAAE50076C0A6 /* JenkinsBuildTrigerView.m */; };
+		32E557F014DCAAE50076C0A6 /* JenkinsBuildTrigerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32E557EE14DCAAE50076C0A6 /* JenkinsBuildTrigerView.xib */; };
+		32E557F414DCAB0E0076C0A6 /* JenkinsBuildHistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E557F214DCAB0E0076C0A6 /* JenkinsBuildHistoryView.m */; };
+		32E557F514DCAB0E0076C0A6 /* JenkinsBuildHistoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32E557F314DCAB0E0076C0A6 /* JenkinsBuildHistoryView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +180,16 @@
 		32DC63F814DB679E0040FF4B /* grey_anime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grey_anime.png; sourceTree = "<group>"; };
 		32DC63F914DB679E0040FF4B /* red_anime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_anime.png; sourceTree = "<group>"; };
 		32DC63FA14DB679E0040FF4B /* yellow_anime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow_anime.png; sourceTree = "<group>"; };
+		32E557CB14DC28DA0076C0A6 /* computer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = computer.png; sourceTree = "<group>"; };
+		32E557E714DCAAC80076C0A6 /* JenkinsJobDetailsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JenkinsJobDetailsView.h; sourceTree = "<group>"; };
+		32E557E814DCAAC80076C0A6 /* JenkinsJobDetailsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JenkinsJobDetailsView.m; sourceTree = "<group>"; };
+		32E557E914DCAAC80076C0A6 /* JenkinsJobDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JenkinsJobDetailsView.xib; sourceTree = "<group>"; };
+		32E557EC14DCAAE50076C0A6 /* JenkinsBuildTrigerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JenkinsBuildTrigerView.h; sourceTree = "<group>"; };
+		32E557ED14DCAAE50076C0A6 /* JenkinsBuildTrigerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JenkinsBuildTrigerView.m; sourceTree = "<group>"; };
+		32E557EE14DCAAE50076C0A6 /* JenkinsBuildTrigerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JenkinsBuildTrigerView.xib; sourceTree = "<group>"; };
+		32E557F114DCAB0E0076C0A6 /* JenkinsBuildHistoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JenkinsBuildHistoryView.h; sourceTree = "<group>"; };
+		32E557F214DCAB0E0076C0A6 /* JenkinsBuildHistoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JenkinsBuildHistoryView.m; sourceTree = "<group>"; };
+		32E557F314DCAB0E0076C0A6 /* JenkinsBuildHistoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JenkinsBuildHistoryView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -423,6 +440,7 @@
 				32C357E214D9D300000F5691 /* health-20to39.png */,
 				32C357F514D9D931000F5691 /* aborted.png */,
 				32C0F55D14DB6F06008EB543 /* aborted_anime.png */,
+				32E557CB14DC28DA0076C0A6 /* computer.png */,
 				32C357F614D9D931000F5691 /* disabled.png */,
 				32C357E314D9D300000F5691 /* health-40to59.png */,
 				32C357E414D9D300000F5691 /* health-60to79.png */,
@@ -454,6 +472,15 @@
 				32DC63E614DB2CA70040FF4B /* JenkinsJobView.h */,
 				32DC63E714DB2CA70040FF4B /* JenkinsJobView.m */,
 				32DC63E814DB2CA70040FF4B /* JenkinsJobView.xib */,
+				32E557E714DCAAC80076C0A6 /* JenkinsJobDetailsView.h */,
+				32E557E814DCAAC80076C0A6 /* JenkinsJobDetailsView.m */,
+				32E557E914DCAAC80076C0A6 /* JenkinsJobDetailsView.xib */,
+				32E557EC14DCAAE50076C0A6 /* JenkinsBuildTrigerView.h */,
+				32E557ED14DCAAE50076C0A6 /* JenkinsBuildTrigerView.m */,
+				32E557EE14DCAAE50076C0A6 /* JenkinsBuildTrigerView.xib */,
+				32E557F114DCAB0E0076C0A6 /* JenkinsBuildHistoryView.h */,
+				32E557F214DCAB0E0076C0A6 /* JenkinsBuildHistoryView.m */,
+				32E557F314DCAB0E0076C0A6 /* JenkinsBuildHistoryView.xib */,
 			);
 			name = JenkinsJobView;
 			sourceTree = "<group>";
@@ -553,6 +580,10 @@
 				32C0F56114DB6F12008EB543 /* blank.png in Resources */,
 				32C0F56314DB70B5008EB543 /* folder.png in Resources */,
 				32CCEFFC14DBBD0300CF66C0 /* package.png in Resources */,
+				32E557CC14DC28DA0076C0A6 /* computer.png in Resources */,
+				32E557EB14DCAAC80076C0A6 /* JenkinsJobDetailsView.xib in Resources */,
+				32E557F014DCAAE50076C0A6 /* JenkinsBuildTrigerView.xib in Resources */,
+				32E557F514DCAB0E0076C0A6 /* JenkinsBuildHistoryView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,6 +642,9 @@
 				32DC63DE14DB18C00040FF4B /* JenkinsListAllViews.m in Sources */,
 				32DC63E914DB2CA70040FF4B /* JenkinsJobView.m in Sources */,
 				32DC63EE14DB47B50040FF4B /* JobHelper.m in Sources */,
+				32E557EA14DCAAC80076C0A6 /* JenkinsJobDetailsView.m in Sources */,
+				32E557EF14DCAAE50076C0A6 /* JenkinsBuildTrigerView.m in Sources */,
+				32E557F414DCAB0E0076C0A6 /* JenkinsBuildHistoryView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
