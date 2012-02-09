@@ -76,8 +76,9 @@
 		32E557EB14DCAAC80076C0A6 /* JenkinsJobDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32E557E914DCAAC80076C0A6 /* JenkinsJobDetailsView.xib */; };
 		32E557EF14DCAAE50076C0A6 /* JenkinsBuildTrigerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E557ED14DCAAE50076C0A6 /* JenkinsBuildTrigerView.m */; };
 		32E557F014DCAAE50076C0A6 /* JenkinsBuildTrigerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32E557EE14DCAAE50076C0A6 /* JenkinsBuildTrigerView.xib */; };
-		32E557F414DCAB0E0076C0A6 /* JenkinsBuildHistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E557F214DCAB0E0076C0A6 /* JenkinsBuildHistoryView.m */; };
-		32E557F514DCAB0E0076C0A6 /* JenkinsBuildHistoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32E557F314DCAB0E0076C0A6 /* JenkinsBuildHistoryView.xib */; };
+		32EF07F514E04CFA007C1387 /* JenkinsBuildHistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EF07F314E04CFA007C1387 /* JenkinsBuildHistoryView.m */; };
+		32EF07F614E04CFA007C1387 /* JenkinsBuildHistoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32EF07F414E04CFA007C1387 /* JenkinsBuildHistoryView.xib */; };
+		32EF07F914E051AF007C1387 /* JenkinsQueueHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EF07F814E051AF007C1387 /* JenkinsQueueHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,9 +188,11 @@
 		32E557EC14DCAAE50076C0A6 /* JenkinsBuildTrigerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JenkinsBuildTrigerView.h; sourceTree = "<group>"; };
 		32E557ED14DCAAE50076C0A6 /* JenkinsBuildTrigerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JenkinsBuildTrigerView.m; sourceTree = "<group>"; };
 		32E557EE14DCAAE50076C0A6 /* JenkinsBuildTrigerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JenkinsBuildTrigerView.xib; sourceTree = "<group>"; };
-		32E557F114DCAB0E0076C0A6 /* JenkinsBuildHistoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JenkinsBuildHistoryView.h; sourceTree = "<group>"; };
-		32E557F214DCAB0E0076C0A6 /* JenkinsBuildHistoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JenkinsBuildHistoryView.m; sourceTree = "<group>"; };
-		32E557F314DCAB0E0076C0A6 /* JenkinsBuildHistoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JenkinsBuildHistoryView.xib; sourceTree = "<group>"; };
+		32EF07F214E04CFA007C1387 /* JenkinsBuildHistoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JenkinsBuildHistoryView.h; sourceTree = "<group>"; };
+		32EF07F314E04CFA007C1387 /* JenkinsBuildHistoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JenkinsBuildHistoryView.m; sourceTree = "<group>"; };
+		32EF07F414E04CFA007C1387 /* JenkinsBuildHistoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JenkinsBuildHistoryView.xib; sourceTree = "<group>"; };
+		32EF07F714E051AF007C1387 /* JenkinsQueueHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JenkinsQueueHelper.h; sourceTree = "<group>"; };
+		32EF07F814E051AF007C1387 /* JenkinsQueueHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JenkinsQueueHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -404,6 +407,8 @@
 				32DC63ED14DB47B50040FF4B /* JobHelper.m */,
 				323E335914D88F7600404FC9 /* JenkinsViewHelper.h */,
 				323E335A14D88F7600404FC9 /* JenkinsViewHelper.m */,
+				32EF07F714E051AF007C1387 /* JenkinsQueueHelper.h */,
+				32EF07F814E051AF007C1387 /* JenkinsQueueHelper.m */,
 			);
 			name = JenkinsHelpers;
 			sourceTree = "<group>";
@@ -478,9 +483,9 @@
 				32E557EC14DCAAE50076C0A6 /* JenkinsBuildTrigerView.h */,
 				32E557ED14DCAAE50076C0A6 /* JenkinsBuildTrigerView.m */,
 				32E557EE14DCAAE50076C0A6 /* JenkinsBuildTrigerView.xib */,
-				32E557F114DCAB0E0076C0A6 /* JenkinsBuildHistoryView.h */,
-				32E557F214DCAB0E0076C0A6 /* JenkinsBuildHistoryView.m */,
-				32E557F314DCAB0E0076C0A6 /* JenkinsBuildHistoryView.xib */,
+				32EF07F214E04CFA007C1387 /* JenkinsBuildHistoryView.h */,
+				32EF07F314E04CFA007C1387 /* JenkinsBuildHistoryView.m */,
+				32EF07F414E04CFA007C1387 /* JenkinsBuildHistoryView.xib */,
 			);
 			name = JenkinsJobView;
 			sourceTree = "<group>";
@@ -583,7 +588,7 @@
 				32E557CC14DC28DA0076C0A6 /* computer.png in Resources */,
 				32E557EB14DCAAC80076C0A6 /* JenkinsJobDetailsView.xib in Resources */,
 				32E557F014DCAAE50076C0A6 /* JenkinsBuildTrigerView.xib in Resources */,
-				32E557F514DCAB0E0076C0A6 /* JenkinsBuildHistoryView.xib in Resources */,
+				32EF07F614E04CFA007C1387 /* JenkinsBuildHistoryView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,7 +649,8 @@
 				32DC63EE14DB47B50040FF4B /* JobHelper.m in Sources */,
 				32E557EA14DCAAC80076C0A6 /* JenkinsJobDetailsView.m in Sources */,
 				32E557EF14DCAAE50076C0A6 /* JenkinsBuildTrigerView.m in Sources */,
-				32E557F414DCAB0E0076C0A6 /* JenkinsBuildHistoryView.m in Sources */,
+				32EF07F514E04CFA007C1387 /* JenkinsBuildHistoryView.m in Sources */,
+				32EF07F914E051AF007C1387 /* JenkinsQueueHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

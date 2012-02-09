@@ -10,6 +10,7 @@
 
 #import "JenkinsJobsForView.h"
 #import "JenkinsListAllViews.h"
+#import "JenkinsBuildHistoryView.h"
 
 #import "JenkinsJobView.h"
 
@@ -265,7 +266,7 @@
     } else if (indexPath.section == 1) {
         switch (indexPath.row) {
             case 0:
-                vc = [[JenkinsJobView alloc] init];
+                vc = [[JenkinsBuildHistoryView alloc] init];
                 break;
                 
             case 1:

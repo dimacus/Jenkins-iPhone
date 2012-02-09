@@ -7,7 +7,9 @@
 //
 
 #import "JenkinsBuildHistoryView.h"
-
+#import "JenkinsQueueHelper.h"
+#import "JobHelper.h"
+#import "JenkinsViewHelper.h"
 
 @implementation JenkinsBuildHistoryView
 
@@ -40,11 +42,35 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"DimaSeleniumFF";
     
-    InQueueData  = [[NSMutableArray alloc] initWithObjects:@"Loading queue...", nil];
-    BuildingData = [[NSMutableArray alloc] initWithObjects:@"Loading in progress builds...", nil];
-    FinishedData = [[NSMutableArray alloc] initWithObjects:@"Loading finished builds...", nil];
+    NSMutableDictionary* loadingMessage = [[NSMutableDictionary alloc] init];
+
+    [loadingMessage setObject:@"Loading..." forKey:@"name"];
+    
+    InQueueData  = [[NSMutableArray alloc] initWithObjects:loadingMessage, nil];
+    BuildingData = [[NSMutableArray alloc] initWithObjects:loadingMessage, nil];
+    FinishedData = [[NSMutableArray alloc] initWithObjects:loadingMessage, nil];
 }
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    
+    InQueueData  = [[NSMutableArray alloc] init];
+    BuildingData = [[NSMutableArray alloc] init];
+    FinishedData = [[NSMutableArray alloc] init];
+    
+    NSArray* buildTypes = [[NSArray alloc] initWithObjects:BuildingData, FinishedData, nil];
+    
+    [JenkinsQueueHelper populateBuildQueueTable:JenkinsBuildHistoryTable with:InQueueData forJobName:self.title];
+    
+    [JenkinsViewHelper populateBuildQueueTableWithRunningAndFinishedJobs:JenkinsBuildHistoryTable withData:buildTypes forJobName:self.title];
+    
+
+}
+
 
 - (void)viewDidUnload
 {
@@ -56,11 +82,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -133,13 +154,14 @@
     
     switch (indexPath.section) {
         case 0:
-            cell.textLabel.text = [InQueueData objectAtIndex:indexPath.row];
+            cell.textLabel.text = [[InQueueData objectAtIndex:indexPath.row] stringForKey:@"name"];
+            cell.imageView.image = [[InQueueData objectAtIndex:indexPath.row] objectForKey:@"image"];
             break;
         case 1:
-            cell.textLabel.text = [BuildingData objectAtIndex:indexPath.row];
+            cell.textLabel.text = [[BuildingData objectAtIndex:indexPath.row] stringForKey:@"name"];
             break;
         case 2:
-            cell.textLabel.text = [FinishedData objectAtIndex:indexPath.row];
+            cell.textLabel.text = [[FinishedData objectAtIndex:indexPath.row] stringForKey:@"name"];
             break;            
         default:
             break;

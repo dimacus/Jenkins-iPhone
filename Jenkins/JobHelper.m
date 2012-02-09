@@ -85,8 +85,6 @@
 
 + (NSString*) getStatusLabel:(id)jsonResponse{
     
-    
-    
     if ([jsonResponse objectForKey:@"buildable"] == kCFBooleanFalse) {
      return @"Build is disabled";
     } else if ([[jsonResponse stringForKey:@"color"] containsString:@"_anime"]) {
@@ -98,7 +96,30 @@
     }else {
      return @"Build in the queue";   
     }
+}
+
++ (NSMutableArray*) getStatusImageFromStringStatus:(id)status isCurrentlyBuilding:(BOOL)building{
     
+    
+    NSMutableArray* statusImageArray = [[NSMutableArray alloc] init];
+    
+    if ([status caseInsensitiveCompare:@"SUCCES"]) {    
+        [statusImageArray addObject:[UIImage imageNamed:@"blue.png"]];
+    } else if ([status caseInsensitiveCompare:@"FAILURE"]) {
+        [statusImageArray addObject:[UIImage imageNamed:@"red.png"]];
+    } else if ([status caseInsensitiveCompare:@"UNSTABLE"]){
+        [statusImageArray addObject:[UIImage imageNamed:@"yellow.png"]];
+    } else {
+        [statusImageArray addObject:[UIImage imageNamed:@"grey.png"]];
+    }
+    
+    
+    if (building == YES) {
+        [statusImageArray addObject:[UIImage imageNamed:@"blank.png"]];
+    }
+    
+    
+    return statusImageArray;
 }
 
 

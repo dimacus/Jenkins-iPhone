@@ -18,4 +18,6 @@
 
 + (void) populateListOfAllViewsTable:(id)viewTable withData:(id)viewTableData;
 
++ (void) populateBuildQueueTableWithRunningAndFinishedJobs:(id)viewTable withData:(id)buildData forJobName:(id)jobName;
+
 @end

@@ -20,4 +20,6 @@
 + (NSString*) getHealthImage:(id)jsonResponse;
 + (NSMutableArray*) getStatusImage:(id)jsonResponse;
 + (NSString*) getStatusLabel:(id)jsonResponse;
++ (NSMutableArray*) getStatusImageFromStringStatus:(id)status isCurrentlyBuilding:(BOOL)building;
+
 @end
